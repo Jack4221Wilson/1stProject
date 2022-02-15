@@ -1,11 +1,11 @@
 
   let w = process.stdout.columns
 
+  let mode = 0
 
 function draw () {
   setTimeout(draw,1000)
   let output = ''
-  let mode = 0
   for (let j = 0; j < w/8; j++) {
     //output += '_/-\\6'
     //output += '____6'
@@ -23,6 +23,11 @@ function draw () {
       output += '  _____6'
       mode = 0
     }
+  }
+  if (mode == 0)  {
+    mode = 1
+  } else {
+    mode = 0
   }
   console.log(output)
 }
