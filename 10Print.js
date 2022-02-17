@@ -6,28 +6,25 @@
 function draw () {
   setTimeout(draw,1000)
   let output = ''
-  for (let j = 0; j < w/8; j++) {
+  for (let j = 0; j < w/5; j++) {
     //output += '_/-\\6'
     //output += '____6'
-/*
-    if (Math.random() > 0.5){
-      output += '\\'
-    } else {
-      output += '/'
+    let num = Math.random()
+    if (num < 0.17){
+      output += '[+++]'
+    } else if (num > 0.16 && num < 0.32){
+      output += '[---]'
+    } else if (num > 0.32 && num < 0.48){
+      output += '[***]'
+    } else if (num > 0.48 && num < 0.64){
+      output += '[///]'
+    } else if (num > 0.64 && num < 0.80){
+      output += '[^^^]'
+    } else if (num > 0.80){
+      output += '[%%%]'
     }
-    */
-    if (mode == 0) {
-      output += '  _/-\\_6'
-      mode = 1
-    } else {
-      output += '  _____6'
-      mode = 0
-    }
-  }
-  if (mode == 0)  {
-    mode = 1
-  } else {
-    mode = 0
+
+
   }
   console.log(output)
 }
