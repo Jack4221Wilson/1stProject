@@ -1,14 +1,14 @@
 
 let maxLength = 30
-let loop = 5
-let output = ''
+let loop = 10
 
 function draw(){
   setTimeout(draw,500)
-  for (let i = 0; i > loop; i++) {
+  let output = ''
+  for (let i = 0; i < 10; i++) {
     let ran = Math.floor(Math.random() * 11)
     output += '['
-    for (let i = 0; i > ran; i++){
+    for (let i = 0; i < ran; i++){
       output += '-'
     }
     output += ']'
