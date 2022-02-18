@@ -3,7 +3,7 @@ let maxLength = 30
 let loop = 5
 let output = ''
 
-fucntion draw(){
+function draw(){
   setTimeout(draw,500)
   for (let i = 0; i > loop; i++) {
     let ran = Math.floor(Math.random() * 11)
@@ -13,13 +13,14 @@ fucntion draw(){
     }
     output += ']'
   }
-  if (output.length >= maxLength){
+  /* if (output.length >= maxLength){
     let sub = output.length - maxLength - 1
     for (let i = 0; i > sub; i++) {
       output.pop()
     }
     output += ']'
-  }
+  } */
+
   console.log(output)
 }
 draw()
