@@ -9,22 +9,30 @@ function draw () {
   for (let j = 0; j < w/5; j++) {
     //output += '_/-\\6'
     //output += '____6'
-    let num = Math.random()
-    if (num < 0.17){
-      output += '[+++]'
-    } else if (num > 0.16 && num < 0.32){
-      output += '[---]'
-    } else if (num > 0.32 && num < 0.48){
-      output += '[***]'
-    } else if (num > 0.48 && num < 0.64){
-      output += '[///]'
-    } else if (num > 0.64 && num < 0.80){
-      output += '[^^^]'
-    } else if (num > 0.80){
-      output += '[%%%]'
+    if (mode == 0){
+      let ran = Math.floor(Math.random() * 6)
+      output += ' _/'
+      for (let i = 0; i < ran; i++) {
+        output += '-'
+      }
+      output += '\\_6'
+      mode = 1
+    } else {
+      let ran = Math.floor(Math.random() * 11)
+      output += ' __'
+      for (let i = 0; i < ran; i++){
+        output += '_'
+      }
+      output += '__6'
+      mode = 0
     }
+  }
 
 
+  if (mode == 0)  {
+    mode = 1
+  } else {
+    mode = 0
   }
   console.log(output)
 }
