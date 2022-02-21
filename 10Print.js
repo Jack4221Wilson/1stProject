@@ -40,7 +40,7 @@ function draw () {
   } else {
     mode = 0
   }
-  console.log(sub)
+
   console.log(output)
 }
 
