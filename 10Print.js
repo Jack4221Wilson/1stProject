@@ -28,12 +28,11 @@ function draw () {
     }
   }
   let length = output.length
-  let sub = (length - w) + 2
+  let sub = (length - w)
   if (length > w){
     for (let i = 0; i < sub; i++) {
      output = output.slice(0,-1)
     }
-    output += '_6'
   }
 
   if (mode == 0)  {
