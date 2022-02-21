@@ -6,7 +6,7 @@
 function draw () {
   setTimeout(draw,1000)
   let output = ''
-  for (let j = 0; j < w/5; j++) {
+  for (let j = 0; j < w/8; j++) {
     //output += '_/-\\6'
     //output += '____6'
     if (mode == 0){
@@ -40,6 +40,7 @@ function draw () {
   } else {
     mode = 0
   }
+  console.log(sub)
   console.log(output)
 }
 
